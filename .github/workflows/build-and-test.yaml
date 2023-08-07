@@ -27,7 +27,7 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Change directory
-      run: cd ../../ActionWork
+      run: cd ActionWork
 
     - name: Install dependencies
       run: dotnet restore
