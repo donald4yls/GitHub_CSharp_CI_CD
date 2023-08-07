@@ -20,6 +20,11 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
+    - name: CD folder
+      run: echo "cd ../../ActionWork"
+      shell: bash
+
+    steps:
     - uses: actions/checkout@v3
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
