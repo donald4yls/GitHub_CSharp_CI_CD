@@ -3,9 +3,6 @@ name: build and test
 on:
   push:
     branches: [ main ]
-    paths:
-    - 'ActionWork/**.cs'
-    - 'ActionWork/**.csproj'
 
 env:
   DOTNET_VERSION: '7.0.x' # The .NET SDK version to use
