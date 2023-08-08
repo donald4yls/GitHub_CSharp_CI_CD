@@ -41,6 +41,7 @@ jobs:
       if: always()
       with:
         name: DotNET Tests
+        github-token: ${{ secrets.CICDTOKEN }}
         path: "**/TestResults/test-results.trx"                            
         reporter: dotnet-trx
         fail-on-error: true
