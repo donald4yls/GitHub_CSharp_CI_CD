@@ -4,6 +4,10 @@ on:
   push:
     branches: [ main ]
 
+defaults:
+  run:
+    working-directory: ./ActionWork/ActionWork.Test
+
 env:
   DOTNET_VERSION: '7.0.x' # The .NET SDK version to use
 
@@ -22,9 +26,6 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
-
-    - name: Change directory
-      run: cd .\ActionWork\ActionWork.Test
 
     - name: Install dependencies
       run: dotnet restore
